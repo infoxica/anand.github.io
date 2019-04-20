@@ -16,8 +16,8 @@ $primary-color: #333;
 $primary-gradient: linear-gradient(to right, #2af598 0%, #009efd 100%);
 
 body {
-  font: 100% $font-primary !important;
-  color: $primary-color;
+	font: 100% $font-primary !important;
+	color: $primary-color;
 }
 
 html {
@@ -100,7 +100,8 @@ mark {
 }
 
 small {
-	font-size: 80%
+	font-size: 80%;
+	font-weight: 600;
 }
 
 sub,
@@ -410,7 +411,7 @@ a {
 
 a:focus,
 a:hover {
-	color: #b82e2e;
+	color: #fff;
 	text-decoration: underline
 }
 
@@ -2740,11 +2741,11 @@ h6,
 	font-family: $font-primary;
 	font-weight: normal;
 	// text-transform: uppercase;
-    // color: $primary-gradient;
-    letter-spacing: 0.02em;
-    background: $primary-gradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	// color: $primary-gradient;
+	letter-spacing: 0.02em;
+	background: $primary-gradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	transition: 0.2s color linear
 }
 
@@ -3085,9 +3086,9 @@ svg {
 	height: 100%;
 	width: 200px;
 	background-color: $primary-background;
-    border-right: 1px solid #201c29;
+	border-right: 1px solid #201c29;
 	transform: translateX(-100%);
-    transition: 1s transform cubic-bezier(0.86, 0, 0.07, 1);
+	transition: 1s transform cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 @media (min-width: 768px) {
@@ -3129,9 +3130,9 @@ svg {
 }
 
 .menu__link:hover i {
-    background: linear-gradient(to right, #2af598 0%, #009efd 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
+	background: linear-gradient(to right, #2af598 0%, #009efd 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .menu__link:hover .menu__title {
@@ -3184,7 +3185,7 @@ svg {
 }
 
 .menu__icon {
-    font-size: 40px;
+	font-size: 40px;
 	margin: 5px auto 0;
 	margin: .3125rem auto 0;
 	transition: 0.2s transform ease-in-out
@@ -3472,8 +3473,8 @@ svg {
 	z-index: 0;
 	height: 3px;
 	width: 300px;
-    // background-color: #201c29;
-    background-image: linear-gradient(to right, #2af598 0%, #009efd 100%);
+	// background-color: #201c29;
+	background-image: linear-gradient(to right, #2af598 0%, #009efd 100%);
 	transform: translateX(-50%) rotate(25deg)
 }
 
@@ -3484,27 +3485,27 @@ svg {
 }
 
 .heading__profile_pic {
-    position: relative;
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    background-image: $primary-gradient;
-    margin-bottom: 2em;
+	position: relative;
+	max-width: 150px;
+	max-height: 150px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	background-image: $primary-gradient;
+	margin-bottom: 2em;
 }
 
 .heading__profile_pic:before {
-    border-radius: 100%;
-    content: '';
-    background-image: $primary-gradient;
-    background-repeat: no-repeat;
-    padding: 10px;
-    width: 100%;
-    height:100%;
-    top: -10px;
-    left: -10px;
-    position:absolute;
-    z-index:-1;
+	border-radius: 100%;
+	content: '';
+	background-image: $primary-gradient;
+	background-repeat: no-repeat;
+	padding: 10px;
+	width: 100%;
+	height:100%;
+	top: -10px;
+	left: -10px;
+	position:absolute;
+	z-index:-1;
 }
 
 .heading__title,
@@ -4417,8 +4418,8 @@ svg {
 }
 
 .resume__role {
-    display: block;
-    color:#fff;
+	display: block;
+	color:#fff;
 	font-family: $font-primary;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -4430,13 +4431,13 @@ svg {
 	padding: .625rem 0
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
 	.resume__role {
 		display: inline-block;
 		padding: 0 0 0 20px;
 		padding: 0 0 0 1.25rem
 	}
-}
+}*/
 
 .resume__list {
 	display: inline-block;
@@ -4492,17 +4493,26 @@ svg {
 }
 
 .resume__link {
-    white-space: nowrap;
-    border: 3px solid #28242f;
-    border-radius: 2rem;
-    padding: .2rem .85rem .25rem .85rem;
-    color: #fff;
-    margin-bottom: 1.875em;
-    text-align: center
-}
+	white-space: nowrap;
+	border: 3px solid #28242f;
+	border-radius: 2rem;
+	padding: .2rem .85rem .25rem .85rem;
+	color: #fff;
+	margin-bottom: 1.875em;
+    text-align: center;
 
-.resume__link:hover {
-    background: linear-gradient(to right, #2af598 0%, #009efd 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    &:hover {
+		background: linear-gradient(to right, #2af598 0, #009efd 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+.resume__position {
+	border-bottom: 2px dashed #2e283a;
+	margin-bottom: 2rem;
+
+	&:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
 }
